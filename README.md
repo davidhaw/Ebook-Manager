@@ -1,4 +1,6 @@
 # Ebook Manager
+[![Build Status](https://travis-ci.org/davidhaw/Ebook-Manager.svg?branch=cli)](https://travis-ci.org/davidhaw/Ebook-Manager)
+
 
 How to Use and Install:
 
