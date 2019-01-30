@@ -1,7 +1,8 @@
 import java.io.File;
 import java.util.Scanner;
 import proprietaryDependancies.ListFiles;
-
+import org.zeroturnaround.zip.*;
+import org.slf4j.*;
 public class Main {
 
 	 public static void main(String[] args) {
@@ -42,8 +43,8 @@ public class Main {
 			 } //End of Second Question
 			 
 		 } else if (uI == 2) { //First Question, second answer
-			 
-			 
+			ZipUtil.pack(new File("./Ebooks"), new File("./demo.zip"));
+
 		 } //End of Second Question
 		 
 	     scanner.close(); 
