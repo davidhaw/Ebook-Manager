@@ -1,6 +1,7 @@
 package proprietaryDependancies;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class ListFiles {
 
@@ -20,5 +21,17 @@ public class ListFiles {
 		 }
 		 return listOfFiles;
 	}
-	 
+	
+	
+	public static ArrayList<String> getEpubs(String directory) {
+		  ArrayList<String> textFiles = new ArrayList<String>();
+		  File dir = new File(directory);
+		  for (File file : dir.listFiles()) {
+		    if (file.getName().endsWith((".epub"))) {
+		      textFiles.add(file.getName());
+		    }
+		  }
+		  return textFiles;
+		}
+
 }
