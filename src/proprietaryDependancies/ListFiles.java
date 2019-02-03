@@ -24,14 +24,19 @@ public class ListFiles {
 	
 	
 	public static ArrayList<String> getEpubs(String directory) {
+		 
 		  ArrayList<String> textFiles = new ArrayList<String>();
+		  try {
 		  File dir = new File(directory);
 		  for (File file : dir.listFiles()) {
 		    if (file.getName().endsWith((".epub"))) {
 		      textFiles.add(file.getName());
 		    }
 		  }
-		  return textFiles;
+		
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
+		 return textFiles;
+	}
 }

@@ -18,7 +18,7 @@ public class ShowInfo {
 		ArrayList<String> info = new ArrayList<String>();
 		
 		EpubReader epubReader = new EpubReader();
-		 Book book = epubReader.readEpub(new FileInputStream("." + pathRe));
+		 Book book = epubReader.readEpub(new FileInputStream(pathRe));
 		 List<Author> authours = book.getMetadata().getAuthors();
 
 		 //Convert the List Object(authours) into a string list so we can ad it into the info string list
@@ -35,8 +35,12 @@ public class ShowInfo {
 	    	 info.add(strings.get(i));
 	     }
 	     
+	     
 	     info.add(language);
-
+	     info.add(book.getTitle());
+	     List<String> publishers = book.getMetadata().getPublishers();
+	     info.addAll(publishers);
+	     
 		 return info; 
 		
 		
